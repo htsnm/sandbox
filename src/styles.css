@@ -1,4 +1,29 @@
-.App {
+body {
   font-family: sans-serif;
   text-align: center;
+  color: "red";
+  letter-spacing: 1.5px;
+}
+
+b {
+  background: url('https://www.austinhindutemple.org/aht/wp-content/themes/aht_new_theme/images/bg.png') repeat scroll 0 0 transparent;
+  background-color: #f2711c!important;
+}
+
+
+.bg-orange1 {
+  background-color: #9F2629!important;
+  background-image: url('https://temple.mountmadonna.org/assets/images/yajna_fademask.png')!important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100%;
+    padding: 4em 50% 4em 4em;
+    min-height: 40vh;
+}
+
+.test1 {
+background-image: url('https://www.tirumala.org/NewImages/Day-Bg.jpg')!important;
+background-repeat: no-repeat!important;
+    background-size: contain;
+    background-position: 100%;
 }
