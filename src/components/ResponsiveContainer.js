@@ -66,7 +66,7 @@ class DesktopContainer extends Component {
           <Segment
             className = "bg-orange"         
             textAlign="center"
-            style={{ padding: "0em" }}
+            style={{ padding: "0em", border: "none" }}
             vertical
           >
             <div className="banner-container">
@@ -148,7 +148,9 @@ class MobileContainer extends Component {
         getWidth={getWidth}
         maxWidth={Responsive.onlyMobile.maxWidth}
       >
-          <Segment>
+          <Segment
+            style={{ padding: "0em", border: "none", margin: "0em" }}
+          >
             <a href="./" class="ui image">
               <img
                 alt="banner"
@@ -167,38 +169,62 @@ class MobileContainer extends Component {
             Home
           </Menu.Item>
           <Menu.Item>
-            <Menu.Header>Products</Menu.Header>
+            <Menu.Header>About Us</Menu.Header>
             <Menu.Menu>
               <Menu.Item
               as = "a"
-              name='enterprise'
+              name='mission'
               textAlign='left'
-
               onClick={this.handleItemClick}
-            />
+              >
+                Mission Statement
+              </Menu.Item>
               <Menu.Item
-                name='consumer'
+                name='board'
                 as = "a"
                 onClick={this.handleItemClick}
-              />
+              >
+                Board Members
+              </Menu.Item>
             </Menu.Menu>
           </Menu.Item>
 
           <Menu.Item>
-            <Menu.Header>CMS Solutions</Menu.Header>
+            <Menu.Header>Events</Menu.Header>
             <Menu.Menu>
               <Menu.Item
-                name='rails'
+                name='daily'
+                as = "a"
                 onClick={this.handleItemClick}
-              />
+              >
+                Daily Events
+              </Menu.Item>
               <Menu.Item
-                name='python'
+                name='annual'
+                as = "a"
                 onClick={this.handleItemClick}
-              />
+              >
+                Annual Events
+              </Menu.Item>
+              </Menu.Menu>
+          </Menu.Item>
+          <Menu.Item>
+            <Menu.Header>Gallery</Menu.Header>
+            <Menu.Menu>
               <Menu.Item
-                name='php'
+                name='photos'
+                as = "a"
                 onClick={this.handleItemClick}
-              />
+              >
+                Photos
+              </Menu.Item>
+              <Menu.Item
+                name='videos'
+                as = "a"
+                onClick={this.handleItemClick}
+              >
+                Videos
+              </Menu.Item>              
             </Menu.Menu>
           </Menu.Item>
         </Sidebar>
@@ -206,8 +232,8 @@ class MobileContainer extends Component {
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment            
             textAlign="center"
-            style={{ padding: "1em 0em" }}
-            vertical
+            style={{ padding: "0em", border: "none", margin: "0em" }}
+            vertical1
           >
             <Container>
               <Menu secondary size="large">

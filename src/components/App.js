@@ -14,7 +14,7 @@ import ResponsiveContainer from './ResponsiveContainer.js';
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment className="test" style={{ padding: '8em 0em' }} vertical>
+    <Segment className="test" style={{ padding: '2em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
