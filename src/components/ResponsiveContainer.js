@@ -5,6 +5,7 @@ import {
   Container,
   Dropdown,
   Icon,
+  Label,
   Menu,
   Responsive,
   Segment,
@@ -65,15 +66,26 @@ class DesktopContainer extends Component {
           <Segment
             className = "bg-orange"         
             textAlign="center"
-            style={{ padding: "1em 0em" }}
+            style={{ padding: "0em" }}
             vertical
           >
-            <a href="./" class="ui image">
-              <img
-                alt="banner"
-                src="http://htsnm.dreamhosters.com/wp-content/uploads/2011/02/copy-cropped-banner_sandia_zia.jpg"
-              />
-            </a>
+            <div className="banner-container">
+              <div className="banner">
+                <div className="contact">
+                  8418 Zuni Rd SE, Albuquerque, NM 87108
+                  <div class="communicate">
+                    <Label as='a'>
+                        <Icon name='mail' />
+                        abafsd@sadf.com
+                      </Label>
+                      <Label as='a'>                    
+                        <Icon name='phone volume' />
+                        +1-512-456-5665
+                      </Label>                 
+                  </div>
+                </div>
+              </div>    
+            </div>
             <Menu
               fixed={fixed ? "top" : null}              
               pointing={!fixed}
@@ -97,7 +109,6 @@ class DesktopContainer extends Component {
                 />
 
                 <Dropdown item simple text="Events" options={eventOptions} />
-
                 <Dropdown item simple text="Gallery" options={galleryOptions} />
 
                 {/* <Icon circular name='facebook square big' /> */}
@@ -137,56 +148,80 @@ class MobileContainer extends Component {
         getWidth={getWidth}
         maxWidth={Responsive.onlyMobile.maxWidth}
       >
-        <a href="./" class="ui fluid image">
-          <img
-            alt="banner"
-            src="http://htsnm.dreamhosters.com/wp-content/uploads/2011/02/copy-cropped-banner_sandia_zia.jpg"
-          />
-        </a>
-
+          <Segment>
+            <a href="./" class="ui image">
+              <img
+                alt="banner"
+                src="http://htsnm.dreamhosters.com/wp-content/uploads/2011/02/copy-cropped-banner_sandia_zia.jpg"
+              />
+            </a>
+          </Segment>
         <Sidebar
           as={Menu}
-          animation="push"
-          inverted
+          animation="push"          
           onHide={this.handleSidebarHide}
           vertical
           visible={sidebarOpened}
-        >
-          <Menu.Item as="a" active>
+        >        
+          <Menu.Item as="a">
             Home
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
+          <Menu.Item>
+            <Menu.Header>Products</Menu.Header>
+            <Menu.Menu>
+              <Menu.Item
+              as = "a"
+              name='enterprise'
+              textAlign='left'
+
+              onClick={this.handleItemClick}
+            />
+              <Menu.Item
+                name='consumer'
+                as = "a"
+                onClick={this.handleItemClick}
+              />
+            </Menu.Menu>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Menu.Header>CMS Solutions</Menu.Header>
+            <Menu.Menu>
+              <Menu.Item
+                name='rails'
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item
+                name='python'
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item
+                name='php'
+                onClick={this.handleItemClick}
+              />
+            </Menu.Menu>
+          </Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
-          <Segment
-            inverted
+          <Segment            
             textAlign="center"
             style={{ padding: "1em 0em" }}
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size="large">
+              <Menu secondary size="large">
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name="sidebar" />
                 </Menu.Item>
                 <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Sign Up
+                  <Button as="a">
+                    Donate
                   </Button>
                 </Menu.Item>
               </Menu>
             </Container>
-            {/* <HomepageHeading mobile /> */}
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Responsive>

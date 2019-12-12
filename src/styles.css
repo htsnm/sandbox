@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  text-align: center;
   color: "red";
   letter-spacing: 1.5px;
 }
@@ -22,8 +21,31 @@ b {
 }
 
 .test1 {
-background-image: url('https://www.tirumala.org/NewImages/Day-Bg.jpg')!important;
-background-repeat: no-repeat!important;
+  background-image: url('https://www.tirumala.org/NewImages/Day-Bg.jpg')!important;
+  background-repeat: no-repeat!important;
     background-size: contain;
     background-position: 100%;
+}
+
+.banner-container {
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,47,1) 0%, rgba(252,176,69,1) 42%);
+}
+
+.banner {
+  display: inline-block;
+  min-width: 990px;
+  min-height: 180px;
+  background-image: url('http://htsnm.dreamhosters.com/wp-content/uploads/2011/02/copy-cropped-banner_sandia_zia.jpg')!important;
+  background-repeat: no-repeat!important;
+}
+
+.banner .contact {
+  padding-top: 120px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.banner .contact .communicate {
+  margin-top: 5px;
 }
